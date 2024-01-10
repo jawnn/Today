@@ -10,7 +10,12 @@ import UIKit
 extension ReminderViewController {
     enum Row: Hashable {
         case header(String)
-        case title, date, time, notes
+        case title
+        case date
+        case time
+        case notes
+        case editableText(String?)
+        case editableDate(Date)
 
         var imageName: String? {
             switch self {
